@@ -5,7 +5,7 @@ author = "Viggo Stomsvik"
 description = "Keep IT tidy"
 profilePicture = "images/profile.jpg"
 keywords = ""
-favicon = "favicons/"
+# favicon = "favicons/"
 # example ["css/custom.css"]
 customCss = []
 # example ["js/custom.js"]
