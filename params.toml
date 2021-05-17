@@ -12,7 +12,7 @@ customCss = []
 customJs = [] 
 mainSections = ["post"]
 images = ["images/site-feature-image.png"]
-doNotLoadAnimations = false
+doNotLoadAnimations = true
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
 # Google Site Verify

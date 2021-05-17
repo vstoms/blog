@@ -1,0 +1,35 @@
+---
+title: "Intune Autopilot Hybrid Join Error Something Went Wrong 80070774"
+date: 2019-05-20T15:42:38+02:00
+Description: "Autopilot Hybrid Join error 80070774, no devices can get enrolled into Autopilot and Hybrid join."
+Tags: [Intune, Autopilot, Hybrid]
+Categories: []
+DisableComments: false
+---
+Quick blog around Intune Autopilot Hybrid Domain Join and error message 80070774.
+
+#### Case
+
+This environment was working fine a week ago, but today we got an interesting error message when new clients try to get enrolled into Hybrid Join from Autopilot. Nothing was changed from Intune / Network side.
+
+Error message on the clients
+
+> Offline Domain Join: Could not establish connectivity after time: (0x16E39F) milliseconds. Result: (Could not find the domain controller for this domain.).
+
+As well as some other warnings during the process:
+
+> AutoPilot policy [CloudAssignedDeviceName] not found.
+
+> AutoPilot policy [AUTOPILOT_OOBE_SETTINGS_AAD_AUTH_USING_DEVICE_TICKET] not found.
+
+And where the Intune Connector for Active Directory was installed, there was no indication around offline domain join blob was created or handled to the clients.
+
+#### Solution
+
+The logs did not tell us much what the cause was, and different blogs-post on the internet was telling us that maybe the Computer Name Prefix was wrong, but it was correct like "Company-"
+
+So the solution was a Device configuration with SkipUserStatusPage was active
+
+So if you have this error message and can`t get clients enrolled and you have a device configuration with OMA-URI __./Vendor/MSFT/DMClient/Provider/MS DM Server/FirstSyncStatus/SkipUserStatusPage__ then disable it or delete the profile.
+
+I believe this could have something to do with that Intune Connector for Active Directory is out of preview and the issues that the issues enrollment status page did have is no fixed.
