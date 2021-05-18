@@ -16,7 +16,7 @@ doNotLoadAnimations = true
 # Form Spree Contact Form
 #contactFormAction = "https://formspree.io/f/your-form-hash-here"
 # Google Site Verify
-#googleSiteVerify = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
+googleSiteVerify = "mMNS9Ulfg2FawxEwP91zmDqIQH7e_Uq6hLj9tbj0sZU"
 singleDateFormat = "2/1/2006"
 indexDateFormat = "2/1/2006"
 listDateFormat = "2/1/2006"
