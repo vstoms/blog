@@ -1,10 +1,14 @@
 ---
-title: "Lets Encrypt Certificate on Exchange Servers"
-date: 2018-05-11T08:48:58+02:00
-Description: "Create free certificate from Lets`s encrypt to create a Exchange Lab."
-Tags: [Exchange, Certificate, Hybrid]
+title: Lets Encrypt Certificate on Exchange Servers
+date: 2018-05-11T06:48:58.000Z
+Description: Create free certificate from Lets`s encrypt to create a Exchange Lab.
+Tags:
+    - Exchange
+    - Certificate
+    - Hybrid
 Categories: []
 DisableComments: false
+slug: lets-encrypt-certificate-exchange-servers
 ---
 After Let’s Encrypt accept wildcard certificate we now can use this to build labs.
 
