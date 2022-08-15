@@ -5,7 +5,7 @@ description: null
 author: null
 date: '2022-08-14T07:38:02.997Z'
 lastmod: '2022-08-14T07:38:47.148Z'
-twImage: "/images/Defender.png"
+images: "/images/Defender.png"
 draft: false
 tags:
     - Defender
