@@ -3,6 +3,7 @@ title: "Intune Scep"
 date: 2021-10-19T08:41:33+02:00
 Description: "A reminder how to install and setup SCEP for Intune"
 Tags: ["Intune","Scep","NDES","Certificate"]
+draft: true
 Categories: []
 DisableComments: false
 ---
