@@ -26,6 +26,7 @@ pygmentsCodefencesGuessSyntax = true
  rss = true
  readingTime = true
  useHLJS = true
+ showRelatedPosts = true
 
  [Author]
   name = "Viggo stomsvik"
