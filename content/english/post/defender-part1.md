@@ -77,4 +77,4 @@ Includes everything in Defender for Servers Plan 1.
 
 **Additional features**: All other enhanced Defender for Servers security capabilities for Windows and Linux machines running in Azure, AWS, GCP, and on-premises.
 
-The next post will be about old vs new agents and how to onboard Defender for Server for your servers.
+Next up will be about old vs new agents and how to onboard Defender for Server for your servers.
