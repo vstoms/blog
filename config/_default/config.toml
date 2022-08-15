@@ -21,7 +21,7 @@ pygmentsCodefencesGuessSyntax = true
 [Params]
  favicon = "img/favicon.ico"
  homeTitle = "Keep IT Tidy"
- subtitle = "Notes about Microsoft, Security and scrambels"
+ subtitle = "Notes about Microsoft, Security and random scrambels"
  logo = "img/avatar-icon.png" # Expecting square dimensions
  rss = true
  readingTime = true
