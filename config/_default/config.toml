@@ -28,7 +28,7 @@ pygmentsCodefencesGuessSyntax = true
  useHLJS = true
 
  [Author]
-   name = "Viggo stomsvik"
+  name = "Viggo stomsvik"
   website = "https://blog.stomsvik.com"
   email = "vstoms@gmail.com"
   github = "vstoms"

@@ -29,7 +29,7 @@ To begin this series, we have to start with the boring stuff and for many this i
 
 From previous solutions, it has been normal to pay for the number of servers you wanted to protect. Microsoft has now made some changes to this (asking which solution you get, we will return to this later). You need a license anyway, but there are several ways to obtain these. I will try to describe these so that you can make the right choice.
 
-For those who currently have licenses for Defender for Endpoint (Windows 10/11). then the standalone versions of Defender for Endpoint Plan 1 and Plan 2 do not include server licenses. To onboard servers to those plans, you'll need Defender for Servers Plan 1 or Plan 2
+For those who currently have licenses for Defender for Endpoint (Windows 10/11). then the standalone versions of Defender for Endpoint Plan 1 and Plan 2 do not include server licenses. To onboard servers to those plans, you'll need Defender for Servers Plan 1 or Plan 2.
 
 #### "Old way to get the licenses"
 In order to be eligible to purchase Microsoft Defender for Endpoint Server SKU, you must have already purchased a combined minimum of any of the following, Windows E5/A5, Microsoft 365 E5/A5 or Microsoft 365 E5 Security subscription licenses. 
