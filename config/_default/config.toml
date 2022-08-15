@@ -2,11 +2,10 @@ baseURL = "https://blog.stomsvik.com"
 languageCode = "en"
 DefaultContentLanguage = "en"
 title = "Keep IT Tidy"
-theme = "anatole"
-summarylength = 10
+theme = "submodule"
+metaDataFormat = "yaml"
 enableEmoji = true
 enableRobotsTXT = true
-favicon = "favicons/"
 
 # Enable Disqus
 #disqusShortname = ""
@@ -18,3 +17,19 @@ favicon = "favicons/"
 pygmentsUseClasses = true
 pygmentsCodeFences = true
 pygmentsCodefencesGuessSyntax = true
+
+[Params]
+ favicon = "img/favicon.ico"
+ homeTitle = "Keep IT Tidy"
+ subtitle = "Notes about Microsoft, Security and scrambels"
+ logo = "img/avatar-icon.png" # Expecting square dimensions
+ rss = true
+ readingTime = true
+ useHLJS = true
+
+ [Author]
+   name = "Viggo stomsvik"
+  website = "https://blog.stomsvik.com"
+  email = "vstoms@gmail.com"
+  github = "vstoms"
+  twitter = "stoms"
