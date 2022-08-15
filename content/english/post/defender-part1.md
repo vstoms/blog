@@ -50,6 +50,9 @@ Microsoft Defender for Cloud is a Cloud Security Posture Management (CSPM) and C
 
 In Defender for Cloud, you will easily just enable Defender for Servers and your servers that are running in Azure will be onboarded to Defender. We also have the options to choose between plan 1 and 2, this will be covered later on.
 
+If you use Defender for Cloud to get Defender for Server, you will only pay as long the server is up and running. P1 - $0.007/Server/hour and P2 - $0.02/Server/hour
+Included data - 500 MB/day.
+
 ![Defender for Cloud](/images/defender-miniseries/DefenderCloud.png "Defender for Cloud")
 
 If you have servers hosted in your on-premises, AWS or GCP this will be covered in the next blog post.
