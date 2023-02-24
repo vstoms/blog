@@ -4,8 +4,11 @@
   "frontMatter.content.publicFolder": "static",
   "frontMatter.content.pageFolders": [
     {
-      "title": "content",
-      "path": "c:/Users/vigstoms/Documents/GitHub/blog/content"
+      "title": "post",
+      "path": "[[workspace]]/content/english/post"
     }
-  ]
+  ],
+  "frontMatter.content.autoUpdateDate": true,
+  "frontMatter.dashboard.openOnStart": true,
+  "frontMatter.preview.host": "http://localhost:1313"
 }
