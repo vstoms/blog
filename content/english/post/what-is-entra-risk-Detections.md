@@ -1,7 +1,7 @@
 ---
 title: "Risk Detections in Microsoft Entra ID: An Overview"
 date: 2024-08-09T21:30:04+02:00
-draft: true
+draft: false
 ---
 Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats. These detections are crucial for organizations aiming to protect their identity infrastructure from various attack vectors. Below, we'll explore the key aspects of risk detections in Microsoft Entra ID, highlighting how they function and how they can be effectively managed.
 
