@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Azure on My blog</title>
+    <link>http://localhost:1313/tags/azure/</link>
+    <description>Recent content in Azure on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 May 2019 08:46:32 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/azure/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build and Install Windows Terminal From Azure Devops</title>
+      <link>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</link>
+      <pubDate>Tue, 14 May 2019 08:46:32 +0200</pubDate>
+      <guid>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</guid>
+      <description>Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.</description>
+    </item>
+    <item>
+      <title>How to Create Azcopy Container and Automate Run in Azure</title>
+      <link>http://localhost:1313/post/how-to-create-azcopy-container-and-automate-run-in-azure/</link>
+      <pubDate>Tue, 12 Mar 2019 08:30:29 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-create-azcopy-container-and-automate-run-in-azure/</guid>
+      <description>Was working on an case where the customer wanted to copy files within an Azure blob to another blob every nigth.</description>
+    </item>
+  </channel>
+</rss>

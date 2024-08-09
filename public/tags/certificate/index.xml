@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Certificate on My blog</title>
+    <link>http://localhost:1313/tags/certificate/</link>
+    <description>Recent content in Certificate on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 19 Oct 2021 08:41:33 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/certificate/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune Scep</title>
+      <link>http://localhost:1313/post/intune-scep/</link>
+      <pubDate>Tue, 19 Oct 2021 08:41:33 +0200</pubDate>
+      <guid>http://localhost:1313/post/intune-scep/</guid>
+      <description>A quick blog that describes how to set up Intune SCEP.</description>
+    </item>
+    <item>
+      <title>Renewal Ndes Certificate</title>
+      <link>http://localhost:1313/post/renewal-ndes-certificate/</link>
+      <pubDate>Fri, 03 Apr 2020 08:54:29 +0200</pubDate>
+      <guid>http://localhost:1313/post/renewal-ndes-certificate/</guid>
+      <description>Network Device Enrollment Service (NDES) requests two certificates according the following two certificate templates configured with the &amp;ldquo;Intended purpose&amp;rdquo; (Enhanced Key Usages) set to &amp;ldquo;Certificate Request Agent&amp;rdquo;:</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Certificate on Exchange Servers</title>
+      <link>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</link>
+      <pubDate>Fri, 11 May 2018 06:48:58 +0000</pubDate>
+      <guid>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</guid>
+      <description>After Let’s Encrypt accept wildcard certificate we now can use this to build labs.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>My blog</title>
+    <link>http://localhost:1313/</link>
+    <description>Recent content on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 09 Aug 2024 21:30:04 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Risk Detections in Microsoft Entra ID: An Overview</title>
+      <link>http://localhost:1313/post/what-is-entra-risk-detections/</link>
+      <pubDate>Fri, 09 Aug 2024 21:30:04 +0200</pubDate>
+      <guid>http://localhost:1313/post/what-is-entra-risk-detections/</guid>
+      <description>Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats.</description>
+    </item>
+    <item>
+      <title>Migrate Azure AD Connect to Cloud Sync</title>
+      <link>http://localhost:1313/post/migrate-to-cloud-sync/</link>
+      <pubDate>Fri, 24 Feb 2023 08:54:23 +0100</pubDate>
+      <guid>http://localhost:1313/post/migrate-to-cloud-sync/</guid>
+      <description>Today we are going to migrate from Azure AD Connect to the new Cloud Sync agent.</description>
+    </item>
+    <item>
+      <title>How to onboard server to Azure Arc</title>
+      <link>http://localhost:1313/post/onboard-servers-to-azure-arc/</link>
+      <pubDate>Sat, 17 Dec 2022 12:09:53 +0100</pubDate>
+      <guid>http://localhost:1313/post/onboard-servers-to-azure-arc/</guid>
+      <description>Onboarding Windows servers to Azure Arc allows you to manage your on-premises and edge Windows servers using the same Azure portal and tools that you use for cloud-based servers.</description>
+    </item>
+    <item>
+      <title>Defender For Server - Onboarding</title>
+      <link>http://localhost:1313/post/defender-part2/</link>
+      <pubDate>Thu, 25 Aug 2022 09:30:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/defender-part2/</guid>
+      <description>Welcome to part two of the mini-series about Microsoft Defender for Server.</description>
+    </item>
+    <item>
+      <title>Defender For Server - Licesning</title>
+      <link>http://localhost:1313/post/defender-for-server-licensing/</link>
+      <pubDate>Sun, 14 Aug 2022 07:38:02 +0000</pubDate>
+      <guid>http://localhost:1313/post/defender-for-server-licensing/</guid>
+      <description>This is a miniseries about Microsoft Defender for Server, this series will be around licenses/requirements this article, how to onboard Servers, and tips around troubleshooting.</description>
+    </item>
+    <item>
+      <title>Install Defender For Server the modern unified solution</title>
+      <link>http://localhost:1313/post/install-defender-for-server/</link>
+      <pubDate>Wed, 13 Apr 2022 12:38:02 +0000</pubDate>
+      <guid>http://localhost:1313/post/install-defender-for-server/</guid>
+      <description>Defender for Endpoint extends support to also include the Windows Server operating system.</description>
+    </item>
+    <item>
+      <title>Intune Scep</title>
+      <link>http://localhost:1313/post/intune-scep/</link>
+      <pubDate>Tue, 19 Oct 2021 08:41:33 +0200</pubDate>
+      <guid>http://localhost:1313/post/intune-scep/</guid>
+      <description>A quick blog that describes how to set up Intune SCEP.</description>
+    </item>
+    <item>
+      <title>Update Exchange Powershell Module</title>
+      <link>http://localhost:1313/post/update-exchange-powershell-module/</link>
+      <pubDate>Sun, 16 May 2021 18:11:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/update-exchange-powershell-module/</guid>
+      <description>If you try to update the Microsoft Exchange Powershell Module an get error that your administrator has blocked this application because it potentially pose a security risk to your computer.</description>
+    </item>
+    <item>
+      <title>Install Module Unable to Resolve</title>
+      <link>http://localhost:1313/post/install-module-unable-to-resolve/</link>
+      <pubDate>Wed, 20 May 2020 08:52:44 +0200</pubDate>
+      <guid>http://localhost:1313/post/install-module-unable-to-resolve/</guid>
+      <description>If you try to install but get the error message unable to resolve package source &amp;lsquo;https://www.</description>
+    </item>
+    <item>
+      <title>New Windows Package</title>
+      <link>http://localhost:1313/post/new-windows-package/</link>
+      <pubDate>Sun, 17 May 2020 08:49:19 +0200</pubDate>
+      <guid>http://localhost:1313/post/new-windows-package/</guid>
+      <description>If you’re already familiar with what a package manager is, feel free to skip this paragraph.</description>
+    </item>
+    <item>
+      <title>Renewal Ndes Certificate</title>
+      <link>http://localhost:1313/post/renewal-ndes-certificate/</link>
+      <pubDate>Fri, 03 Apr 2020 08:54:29 +0200</pubDate>
+      <guid>http://localhost:1313/post/renewal-ndes-certificate/</guid>
+      <description>Network Device Enrollment Service (NDES) requests two certificates according the following two certificate templates configured with the &amp;ldquo;Intended purpose&amp;rdquo; (Enhanced Key Usages) set to &amp;ldquo;Certificate Request Agent&amp;rdquo;:</description>
+    </item>
+    <item>
+      <title>Chief Information Security Officer Ciso Workshop Training</title>
+      <link>http://localhost:1313/post/chief-information-security-officer-ciso-workshop-training/</link>
+      <pubDate>Tue, 04 Feb 2020 15:38:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/chief-information-security-officer-ciso-workshop-training/</guid>
+      <description>The CISO workshop can help your organization meet the dual security challenges of:</description>
+    </item>
+    <item>
+      <title>Powershell Script Change Proxyaddresses</title>
+      <link>http://localhost:1313/post/powershell-script-change-proxyaddresses/</link>
+      <pubDate>Wed, 04 Sep 2019 15:40:13 +0200</pubDate>
+      <guid>http://localhost:1313/post/powershell-script-change-proxyaddresses/</guid>
+      <description>Quick tip to change proxyaddresses in Active Directory fast with csv input.</description>
+    </item>
+    <item>
+      <title></title>
+      <link>http://localhost:1313/archives/</link>
+      <pubDate>Tue, 28 May 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/archives/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Intune Autopilot Hybrid Join Error Something Went Wrong 80070774</title>
+      <link>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</link>
+      <pubDate>Mon, 20 May 2019 15:42:38 +0200</pubDate>
+      <guid>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</guid>
+      <description>Quick blog around Intune Autopilot Hybrid Domain Join and error message 80070774.</description>
+    </item>
+    <item>
+      <title>Build and Install Windows Terminal From Azure Devops</title>
+      <link>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</link>
+      <pubDate>Tue, 14 May 2019 08:46:32 +0200</pubDate>
+      <guid>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</guid>
+      <description>Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.</description>
+    </item>
+    <item>
+      <title>Gather Windows Autopilot Device Data</title>
+      <link>http://localhost:1313/post/gather-windows-autopilot-device-data/</link>
+      <pubDate>Tue, 14 May 2019 08:45:13 +0200</pubDate>
+      <guid>http://localhost:1313/post/gather-windows-autopilot-device-data/</guid>
+      <description>Link to powershell script Export Computer AutoPilot Data .\Get-WindowsAutoPilotInfo.ps1 -ComputerName MYCOMPUTER -OutputFile .</description>
+    </item>
+    <item>
+      <title>How to Enable Self Service Password Reset</title>
+      <link>http://localhost:1313/post/how-to-enable-self-service-password-reset/</link>
+      <pubDate>Mon, 08 Apr 2019 08:27:11 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-enable-self-service-password-reset/</guid>
+      <description>Self-service password reset (SSPR) is a feature of Azure Active Directory that empowers users to easily reset their passwords and unlock their accounts without interacting with your helpdesk.</description>
+    </item>
+    <item>
+      <title>Install Office Pro Plus in Intune From Xml Data</title>
+      <link>http://localhost:1313/post/install-office-pro-plus-in-intune-from-xml-data/</link>
+      <pubDate>Sat, 30 Mar 2019 08:22:16 +0200</pubDate>
+      <guid>http://localhost:1313/post/install-office-pro-plus-in-intune-from-xml-data/</guid>
+      <description>Microsoft has in Intune 1903 released that we now can deploy Office Pro Plus from xml, before we only have the choice to use the configuration designer.</description>
+    </item>
+    <item>
+      <title>Block Download via Conditional Access and Mcas</title>
+      <link>http://localhost:1313/post/block-download-via-conditional-access-and-mcas/</link>
+      <pubDate>Sun, 17 Mar 2019 08:41:05 +0200</pubDate>
+      <guid>http://localhost:1313/post/block-download-via-conditional-access-and-mcas/</guid>
+      <description>Hi, today I want to talk about Conditional Access and Conditional Access App Control (MCAS for short) but why?</description>
+    </item>
+    <item>
+      <title>How to Create Azcopy Container and Automate Run in Azure</title>
+      <link>http://localhost:1313/post/how-to-create-azcopy-container-and-automate-run-in-azure/</link>
+      <pubDate>Tue, 12 Mar 2019 08:30:29 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-create-azcopy-container-and-automate-run-in-azure/</guid>
+      <description>Was working on an case where the customer wanted to copy files within an Azure blob to another blob every nigth.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Fri, 08 Mar 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>Quick Tip to Get Guid Code for Apps</title>
+      <link>http://localhost:1313/post/quick-tip-to-get-guid-code-for-apps/</link>
+      <pubDate>Sun, 03 Mar 2019 08:33:25 +0200</pubDate>
+      <guid>http://localhost:1313/post/quick-tip-to-get-guid-code-for-apps/</guid>
+      <description>get-wmiobject Win32_Product | Format-Table IdentifyingNumber, Name, LocalPackage -AutoSize </description>
+    </item>
+    <item>
+      <title>About</title>
+      <link>http://localhost:1313/about/</link>
+      <pubDate>Thu, 28 Feb 2019 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/about/</guid>
+      <description>My name is Viggo Stomsvik I’m chief consultant at Atea Norway.</description>
+    </item>
+    <item>
+      <title>Remove Windows 10 Applications From Powershell</title>
+      <link>http://localhost:1313/post/remove-windows-10-applications-from-powershell/</link>
+      <pubDate>Sun, 08 Jul 2018 08:20:16 +0200</pubDate>
+      <guid>http://localhost:1313/post/remove-windows-10-applications-from-powershell/</guid>
+      <description>You can remove application as Get Office, Calender and Mail from powershell, if you are using Intune.</description>
+    </item>
+    <item>
+      <title>Get List of Users From Csv With List of Dls</title>
+      <link>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</link>
+      <pubDate>Tue, 26 Jun 2018 11:03:18 +0200</pubDate>
+      <guid>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</guid>
+      <description>Header in the csv file should be DL&#xA;$PathToCsv = &amp;#34;groups.</description>
+    </item>
+    <item>
+      <title>Identify Users Who Have Registered for Mfa Using the Powershell</title>
+      <link>http://localhost:1313/post/identify-users-who-have-registered-for-mfa-using-the-powershell/</link>
+      <pubDate>Tue, 26 Jun 2018 08:43:48 +0200</pubDate>
+      <guid>http://localhost:1313/post/identify-users-who-have-registered-for-mfa-using-the-powershell/</guid>
+      <description>Identify users who have registered for MFA:&#xA;Get-MsolUser -All | where {$_.</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Certificate on Exchange Servers</title>
+      <link>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</link>
+      <pubDate>Fri, 11 May 2018 06:48:58 +0000</pubDate>
+      <guid>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</guid>
+      <description>After Let’s Encrypt accept wildcard certificate we now can use this to build labs.</description>
+    </item>
+    <item>
+      <title>Enabling Debug Logging for the Netlogon Service</title>
+      <link>http://localhost:1313/post/enabling-debug-logging-for-the-netlogon-service/</link>
+      <pubDate>Tue, 12 Dec 2017 11:07:15 +0200</pubDate>
+      <guid>http://localhost:1313/post/enabling-debug-logging-for-the-netlogon-service/</guid>
+      <description>Here is a easy way to find out where the user is trying to logon to.</description>
+    </item>
+  </channel>
+</rss>

@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Block Download via Conditional Access and Mcas - My blog</title>
+  <meta name="description" content="More and more customers today want control over data located in Office 365, such that the device must be reported in Azure AD and compliant so my home devices cant download content from home.">
+  <meta name="author" content="Viggo stomsvik"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "My blog",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/block-download-via-conditional-access-and-mcas\/",
+          "name": "Block download via conditional access and mcas"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Viggo stomsvik"
+  },
+  "headline": "Block Download via Conditional Access and Mcas",
+  "description" : "More and more customers today want control over data located in Office 365, such that the device must be reported in Azure AD and compliant so my home devices cant download content from home.",
+  "inLanguage" : "en",
+  "wordCount":  820 ,
+  "datePublished" : "2019-03-17T08:41:05",
+  "dateModified" : "2019-03-17T08:41:05",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "Intune, AzureAD, Conditional Access, MCAS" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/block-download-via-conditional-access-and-mcas\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Block Download via Conditional Access and Mcas" />
+<meta property="og:description" content="More and more customers today want control over data located in Office 365, such that the device must be reported in Azure AD and compliant so my home devices cant download content from home.">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/post/block-download-via-conditional-access-and-mcas/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My blog" />
+
+  <meta name="twitter:title" content="Block Download via Conditional Access and Mcas" />
+  <meta name="twitter:description" content="More and more customers today want control over data located in Office 365, such that the device must be reported in Azure AD and compliant so my home devices cant download content from home.">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@stoms" />
+  <meta name="twitter:creator" content="@stoms" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="My blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">My blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="My blog" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="My blog" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Block Download via Conditional Access and Mcas</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on March 17, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;4&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Viggo stomsvik
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Hi, today I want to talk about Conditional Access and Conditional Access App Control (MCAS for short) but why?</p>
+<p>More and more customers today want control over data located in Office 365, such that the device must be reported in Azure AD and compliant so my home devices cant download content from home.</p>
+<p>Luckily for us, this is very easy to set up and I will show you how fast and easy this is.</p>
+<h4 id="how-it-works">How it works</h4>
+<p>Conditional Access App Control uses a reverse proxy architecture and is uniquely integrated with Azure AD conditional access. Azure AD conditional access allows you to enforce access controls on your organization’s apps based on certain conditions. The conditions define who (user or group of users) and what (which cloud apps) and where (which locations and networks) a conditional access policy is applied to. After you’ve determined the conditions, you can route users to Microsoft Cloud App Security where you can protect data with Conditional Access App Control by applying access and session controls.</p>
+<p>Conditional Access App Control enables user app access and sessions to be monitored and controlled in real time based on access and session policies. Access and session policies are used within the Cloud App Security portal to further refine filters and set actions to be taken on a user. With the access and session policies, you can:</p>
+<ul>
+<li><strong>Block on download:</strong> You can block the download of sensitive documents. For example, on unmanaged devices.</li>
+<li><strong>Protect on download:</strong> Instead of blocking the download of sensitive documents, you can require documents to be protected via encryption on download. This encryption makes sure the document is protected and user access is authenticated if the data is downloaded to an untrusted device.</li>
+<li><strong>Monitor low-trust user sessions:</strong> Risky users are monitored when they sign into apps and their actions are logged from within the session. You can investigate and analyze user behavior to understand where, and under what conditions, session policies should be applied in the future.</li>
+<li><strong>Block access:</strong> You can completely block access to specific apps for users coming from unmanaged devices or from non-corporate networks.</li>
+<li><strong>Create read-only mode:</strong> By monitoring and blocking custom in-app activities, you can create a read-only mode to specific apps for specific users.</li>
+<li><strong>Restrict user sessions from non-corporate networks:</strong> Users accessing a protected app from a location that isn&rsquo;t part of your corporate network are allowed restricted access. The download of sensitive materials is blocked or protected.</li>
+</ul>
+<blockquote>
+<p>To use Cloud App Security Conditional Access App Control, you need an Azure Active Directory P1 license and an active Microsoft Cloud App Security subscription. Or be a part of EMS E5 SKU.</p>
+</blockquote>
+<h4 id="setup-the-conditional-access-rules">Setup the Conditional Access rules</h4>
+<ul>
+<li>Go to <a href="https://aad.portal.azure.com">Azure AD Portal</a> and find <a href="https://aad.portal.azure.com/#blade/Microsoft_AAD_IAM/ConditionalAccessBlade/Policies">Conditional Access</a></li>
+<li>Create new policy and give it a name</li>
+<li>Under Users and groups, choose all users or groups, I will just choose all. (You could also exclude user/groups if you have any. I do exclude Global Administrators.)</li>
+</ul>
+<p><img src="/images/camcas/1.png"></p>
+<ul>
+<li>Next open Cloud Apps, I will just choose &ldquo;All cloud apps.&rdquo; but Office 365 SharePoint Online should be enough.</li>
+</ul>
+<p><img src="/images/camcas/2.png"></p>
+<ul>
+<li>Next we go to Conditions and Device state, to select which devices we will force this rule on. And we will exclude devices that are Hybrid joined and marked as compliant.</li>
+</ul>
+<p><img src="/images/camcas/3.png"></p>
+<p>Here we will exclude devices that are hybrid joined and marked as compliant (Intune).</p>
+<p><img src="/images/camcas/4.png"></p>
+<ul>
+<li>Next we go to Access controls and <strong>Grant</strong> and mark Grant Access, Require device to be marked as compliant and Require Hybrid Azure AD joined device</li>
+</ul>
+<p><img src="/images/camcas/5.png"></p>
+<ul>
+<li>Next go to Sessions, and pick Use Conditional Access App Control (Block downloads)</li>
+</ul>
+<p><img src="/images/camcas/6.png"></p>
+<ul>
+<li>Last enable the policy</li>
+</ul>
+<p><img src="/images/camcas/7.png"></p>
+<h4 id="end-user-experience">End-user experience</h4>
+<p>Lets see how the end-user will see the changes.</p>
+<p>When the user try to open OneDrive on an devices that is not compliant or hybrid joined the user will see this: (Sorry for the Norwegian text)</p>
+<p><img src="/images/camcas/8.png"></p>
+<p>Quick google translate:
+You can&rsquo;t go from here
+The program contains sensitive information and can only be accessed from:
+Stoms Corp domain-affiliated entities. Access from personal devices is not permitted.
+However, if you do not plan to do so now, you may be able to visit other Stoms Corp sites. If not, sign out to protect your account.</p>
+<p>We have now block all users who is trying to access OneDrive from any diveces that not match our requirements. But if we want our user to login to OneDrive but not able to download contents?</p>
+<p>Lets remove all Conditions and Grants so only Users and Groups, Cloud apps and Sessions is one.</p>
+<p>This is what the end user will see:</p>
+<p><img src="/images/camcas/9.png">
+We now are proxies from eu2.cas.ms to our OneDrive, and we now can open docs from OneDrive.</p>
+<p>But what happens if we wants to download a file from OneDrive?</p>
+<p><img src="/images/camcas/10.png">
+We are being blocking to download the contents!</p>
+<p><img src="/images/camcas/11.png">
+There is also no way to edit this file in word!</p>
+<h4 id="logging">Logging</h4>
+<p>How is the logging when we are using this?</p>
+<p>From Azure AD:
+<img src="/images/camcas/12.png"></p>
+<p><a href="https://docs.microsoft.com/en-us/cloud-app-security/proxy-intro-aad">Read more on Cloud App</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="http://localhost:1313//tags/intune/">Intune</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/azuread/">AzureAD</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/conditional-access/">Conditional Access</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/mcas/">MCAS</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/intune-scep/">Intune Scep</a></li>
+                
+                    <li><a href="/post/new-windows-package/">New Windows Package</a></li>
+                
+                    <li><a href="/post/renewal-ndes-certificate/">Renewal Ndes Certificate</a></li>
+                
+                    <li><a href="/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/">Intune Autopilot Hybrid Join Error Something Went Wrong 80070774</a></li>
+                
+                    <li><a href="/post/gather-windows-autopilot-device-data/">Gather Windows Autopilot Device Data</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/how-to-create-azcopy-container-and-automate-run-in-azure/" data-toggle="tooltip" data-placement="top" title="How to Create Azcopy Container and Automate Run in Azure">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="http://localhost:1313/post/install-office-pro-plus-in-intune-from-xml-data/" data-toggle="tooltip" data-placement="top" title="Install Office Pro Plus in Intune From Xml Data">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:vstoms@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/vstoms" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/stoms" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://blog.stomsvik.com">Viggo stomsvik</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">My blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.131.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

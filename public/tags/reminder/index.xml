@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Reminder on My blog</title>
+    <link>http://localhost:1313/tags/reminder/</link>
+    <description>Recent content in Reminder on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 20 May 2020 08:52:44 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/reminder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Install Module Unable to Resolve</title>
+      <link>http://localhost:1313/post/install-module-unable-to-resolve/</link>
+      <pubDate>Wed, 20 May 2020 08:52:44 +0200</pubDate>
+      <guid>http://localhost:1313/post/install-module-unable-to-resolve/</guid>
+      <description>If you try to install but get the error message unable to resolve package source &amp;lsquo;https://www.</description>
+    </item>
+    <item>
+      <title>New Windows Package</title>
+      <link>http://localhost:1313/post/new-windows-package/</link>
+      <pubDate>Sun, 17 May 2020 08:49:19 +0200</pubDate>
+      <guid>http://localhost:1313/post/new-windows-package/</guid>
+      <description>If you’re already familiar with what a package manager is, feel free to skip this paragraph.</description>
+    </item>
+    <item>
+      <title>Renewal Ndes Certificate</title>
+      <link>http://localhost:1313/post/renewal-ndes-certificate/</link>
+      <pubDate>Fri, 03 Apr 2020 08:54:29 +0200</pubDate>
+      <guid>http://localhost:1313/post/renewal-ndes-certificate/</guid>
+      <description>Network Device Enrollment Service (NDES) requests two certificates according the following two certificate templates configured with the &amp;ldquo;Intended purpose&amp;rdquo; (Enhanced Key Usages) set to &amp;ldquo;Certificate Request Agent&amp;rdquo;:</description>
+    </item>
+    <item>
+      <title>Powershell Script Change Proxyaddresses</title>
+      <link>http://localhost:1313/post/powershell-script-change-proxyaddresses/</link>
+      <pubDate>Wed, 04 Sep 2019 15:40:13 +0200</pubDate>
+      <guid>http://localhost:1313/post/powershell-script-change-proxyaddresses/</guid>
+      <description>Quick tip to change proxyaddresses in Active Directory fast with csv input.</description>
+    </item>
+  </channel>
+</rss>

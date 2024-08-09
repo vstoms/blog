@@ -1,0 +1,515 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Build and Install Windows Terminal From Azure Devops - My blog</title>
+  <meta name="description" content="Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.">
+  <meta name="author" content="Viggo stomsvik"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "My blog",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/build-and-install-windows-terminal-from-azure-devops\/",
+          "name": "Build and install windows terminal from azure devops"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Viggo stomsvik"
+  },
+  "headline": "Build and Install Windows Terminal From Azure Devops",
+  "description" : "Microsoft announced under \/\/Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.",
+  "inLanguage" : "en",
+  "wordCount":  533 ,
+  "datePublished" : "2019-05-14T08:46:32",
+  "dateModified" : "2019-05-14T08:46:32",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "Termina, Azure, DevOps" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/build-and-install-windows-terminal-from-azure-devops\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Build and Install Windows Terminal From Azure Devops" />
+<meta property="og:description" content="Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My blog" />
+
+  <meta name="twitter:title" content="Build and Install Windows Terminal From Azure Devops" />
+  <meta name="twitter:description" content="Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command …">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@stoms" />
+  <meta name="twitter:creator" content="@stoms" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="My blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">My blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="My blog" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="My blog" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Build and Install Windows Terminal From Azure Devops</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on May 14, 2019
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Viggo stomsvik
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.</p>
+<!-- raw HTML omitted -->
+<p>Windows Terminal will be delivered via the Microsoft Store in Windows 10 and will be updated regularly, ensuring you are always up to date and able to enjoy the newest features and latest improvements with minimum effort.</p>
+<blockquote>
+<p>The Windows Terminal is in the very early alpha stage, and not ready for the general public quite yet, so do not use this in any production environment yet.</p>
+</blockquote>
+<h5 id="prerequisites">Prerequisites</h5>
+<ul>
+<li>Windows 1903</li>
+<li>Certificate (We will install this later)</li>
+<li>Github account</li>
+<li>Azure DevOps account</li>
+<li>MSIX Packaging Tool</li>
+</ul>
+<h5 id="build-windows-terminal-in-azure-devops">Build Windows Terminal in Azure DevOps</h5>
+<ul>
+<li>Fork <a href="https://github.com/microsoft/Terminal">Microsoft/Terminal</a> to your repositories</li>
+<li>Go to <a href="https://dev.azure.com">Azure DevOps site</a> and log in (If you don`t have any account create one, Its free.)</li>
+<li>Create an new project (Im calling it Terminal here.)</li>
+</ul>
+<p><img alt="Main Page" src="/images/Terminal/1.png"></p>
+<ul>
+<li>Navigate to <strong>Pipelines</strong> -&gt; <strong>Builds</strong> and click <strong>New</strong> -&gt; <strong>New build pipeline</strong></li>
+<li>Choose where your code is, our code is on GitHub</li>
+</ul>
+<p><img alt="Choose GitHub" src="/images/Terminal/2.png"></p>
+<ul>
+<li>Select a repository where you fork is located.</li>
+</ul>
+<p><img alt="Select a repository" src="/images/Terminal/33.png"></p>
+<ul>
+<li>Configure your pipeline, choose <strong>Existing Azure Pipeline YAML files</strong></li>
+</ul>
+<p><img alt="Configure your pipeline" src="/images/Terminal/3.png"></p>
+<ul>
+<li>Next select your YAML file, <strong>/build/pipelines/ci.yaml</strong></li>
+</ul>
+<p><img alt="select your YAML file" src="/images/Terminal/4.png"></p>
+<ul>
+<li>Click <strong>Run</strong> and the pipeline will configure and start the job.</li>
+</ul>
+<p><img alt="review the job" src="/images/Terminal/5.png"></p>
+<ul>
+<li>Now the job will go through all the steps</li>
+</ul>
+<p><img alt="steps" src="/images/Terminal/6.png"></p>
+<ul>
+<li>In the end, you will end up with this, and you can now get the files under <strong>Artifacts</strong>. But it will now be installed yet, we need to inject a certificate into the .msix file first.</li>
+</ul>
+<p><img alt="steps" src="/images/Terminal/7.png"></p>
+<h5 id="inject-ssl-certificate-into-msix-applicaiton">Inject SSL Certificate into .msix applicaiton.</h5>
+<p>Before we can install this .msix application, we first need to get a certificate and the easiest way is to create a self-signed certificate.</p>
+<p>Run from Powershell:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">New-SelfSignedCertificate -Type Custom -Subject &#34;CN=Contoso Software, O=Contoso Corporation, C=US&#34; -KeyUsage DigitalSignature -FriendlyName &lt;Your Friendly Name&gt; -CertStoreLocation &#34;Cert:\LocalMachine\My&#34;
+</span></span></code></pre></div><p>Export the certificate if you want to use the certificate on another computer, and copy the certificate into the Local Computer Trusted Root Certification Authorities store.</p>
+<ul>
+<li>Next start MSIX Packaging Tool (If you dont have it, grab it from Microsoft Store)</li>
+<li>Click <strong>Package Editor</strong></li>
+</ul>
+<p><img alt="Package editor" src="/images/Terminal/9.png"></p>
+<ul>
+<li>Find your .msix package and open it.</li>
+</ul>
+<p><img alt="open package" src="/images/Terminal/10.png"></p>
+<ul>
+<li>Under sign package, import your private cert and type in the password you gave it.</li>
+</ul>
+<p><img alt="sign package" src="/images/Terminal/12.png"></p>
+<ul>
+<li>Next press apply, and you will get a message if you want to update the version of this package or not.</li>
+</ul>
+<p><img alt="package version" src="/images/Terminal/13.png"></p>
+<p>Now you have a msix application that you can install into your computer.</p>
+<h5 id="settings">Settings</h5>
+<p>After open the terminal, you can&rsquo;t see any menu buttons.</p>
+<p>Just press Ctrl + T to open a new tab, then you&rsquo;ll see a drop-down button in the tab bar.</p>
+<p>Click it and select Settings, then you can modify the configuration via opened profiles.json</p>
+<h5 id="add-wsl">Add WSL</h5>
+<ul>
+<li>Create a new session in profiles, with content copied from profiles/cmd</li>
+<li>Give it a new guid</li>
+<li>Give it a new name, such as WSL</li>
+<li>Specify its commandline to wsl.exe</li>
+<li>Then you&rsquo;ll find WSL in the drop-down menu of tab bar.</li>
+</ul>
+<p>Here&rsquo;re sample codes:</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;guid&#34;</span><span class="p">:</span> <span class="s2">&#34;{09dc5eef-6840-4050-ae69-21e55e6a2e62}&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;name&#34;</span><span class="p">:</span> <span class="s2">&#34;WSL&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;colorscheme&#34;</span><span class="p">:</span> <span class="s2">&#34;Campbell&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;historySize&#34;</span><span class="p">:</span> <span class="mi">9001</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;snapOnInput&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;cursorColor&#34;</span><span class="p">:</span> <span class="s2">&#34;#FFFFFF&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;cursorShape&#34;</span><span class="p">:</span> <span class="s2">&#34;bar&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;commandline&#34;</span><span class="p">:</span> <span class="s2">&#34;wsl.exe&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;fontFace&#34;</span><span class="p">:</span> <span class="s2">&#34;Consolas&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;fontSize&#34;</span><span class="p">:</span> <span class="mi">12</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;acrylicOpacity&#34;</span><span class="p">:</span> <span class="mf">0.75</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;useAcrylic&#34;</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;closeOnExit&#34;</span><span class="p">:</span> <span class="kc">false</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&#34;padding&#34;</span><span class="p">:</span> <span class="s2">&#34;0, 0, 0, 0&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></div><p><a href="https://gist.github.com/shanselman/221ef38d035fcf2836d664009f144eac">Scott Hanselmans Windows Terminal Profile on GitHub</a></p>
+
+
+        
+          <div class="blog-tags">
+            
+              <a href="http://localhost:1313//tags/termina/">Termina</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/azure/">Azure</a>&nbsp;
+            
+              <a href="http://localhost:1313//tags/devops/">DevOps</a>&nbsp;
+            
+          </div>
+        
+
+        
+
+        
+          
+            
+          
+
+          
+                  <h4 class="see-also">See also</h4>
+                  <ul>
+                
+                
+                    <li><a href="/post/how-to-create-azcopy-container-and-automate-run-in-azure/">How to Create Azcopy Container and Automate Run in Azure</a></li>
+                
+              </ul>
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/gather-windows-autopilot-device-data/" data-toggle="tooltip" data-placement="top" title="Gather Windows Autopilot Device Data">&larr; Previous Post</a>
+            </li>
+          
+          
+            <li class="next">
+              <a href="http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/" data-toggle="tooltip" data-placement="top" title="Intune Autopilot Hybrid Join Error Something Went Wrong 80070774">Next Post &rarr;</a>
+            </li>
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:vstoms@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/vstoms" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/stoms" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://blog.stomsvik.com">Viggo stomsvik</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">My blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.131.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

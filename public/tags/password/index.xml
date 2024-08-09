@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Password on My blog</title>
+    <link>http://localhost:1313/tags/password/</link>
+    <description>Recent content in Password on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 08 Apr 2019 08:27:11 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/password/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Enable Self Service Password Reset</title>
+      <link>http://localhost:1313/post/how-to-enable-self-service-password-reset/</link>
+      <pubDate>Mon, 08 Apr 2019 08:27:11 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-enable-self-service-password-reset/</guid>
+      <description>Self-service password reset (SSPR) is a feature of Azure Active Directory that empowers users to easily reset their passwords and unlock their accounts without interacting with your helpdesk.</description>
+    </item>
+  </channel>
+</rss>

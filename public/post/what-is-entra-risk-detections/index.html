@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en" itemscope itemtype="http://schema.org/WebPage">
+  <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    
+
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+
+  <title>Risk Detections in Microsoft Entra ID: An Overview - My blog</title>
+  <meta name="description" content="Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats.">
+  <meta name="author" content="Viggo stomsvik"/><script type="application/ld+json">
+{
+    "@context": "http://schema.org",
+    "@type": "WebSite",
+    "name": "My blog",
+    
+    "url": "http:\/\/localhost:1313\/"
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Organization",
+  "name": "",
+  "url": "http:\/\/localhost:1313\/"
+  
+  
+  
+  
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [{
+        "@type": "ListItem",
+        "position": 1,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/",
+          "name": "home"
+        }
+    },{
+        "@type": "ListItem",
+        "position": 3,
+        "item": {
+          "@id": "http:\/\/localhost:1313\/post\/what-is-entra-risk-detections\/",
+          "name": "Risk detections in microsoft entra ID an overview"
+        }
+    }]
+}
+</script><script type="application/ld+json">
+{
+  "@context": "http://schema.org",
+  "@type": "Article",
+  "author": {
+    "name" : "Viggo stomsvik"
+  },
+  "headline": "Risk Detections in Microsoft Entra ID: An Overview",
+  "description" : "Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats.",
+  "inLanguage" : "en",
+  "wordCount":  627 ,
+  "datePublished" : "2024-08-09T21:30:04",
+  "dateModified" : "2024-08-09T21:30:04",
+  "image" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+  "keywords" : [ "" ],
+  "mainEntityOfPage" : "http:\/\/localhost:1313\/post\/what-is-entra-risk-detections\/",
+  "publisher" : {
+    "@type": "Organization",
+    "name" : "http:\/\/localhost:1313\/",
+    "logo" : {
+        "@type" : "ImageObject",
+        "url" : "http:\/\/localhost:1313\/img\/avatar-icon.png",
+        "height" :  60 ,
+        "width" :  60
+    }
+  }
+}
+</script>
+
+<meta property="og:title" content="Risk Detections in Microsoft Entra ID: An Overview" />
+<meta property="og:description" content="Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats.">
+<meta property="og:image" content="http://localhost:1313/img/avatar-icon.png" />
+<meta property="og:url" content="http://localhost:1313/post/what-is-entra-risk-detections/" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="My blog" />
+
+  <meta name="twitter:title" content="Risk Detections in Microsoft Entra ID: An Overview" />
+  <meta name="twitter:description" content="Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats.">
+  <meta name="twitter:image" content="http://localhost:1313/img/avatar-icon.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@stoms" />
+  <meta name="twitter:creator" content="@stoms" />
+  <link href='http://localhost:1313/img/favicon.ico' rel='icon' type='image/x-icon'/>
+  <meta name="generator" content="Hugo 0.131.0">
+  <link rel="alternate" href="http://localhost:1313/index.xml" type="application/rss+xml" title="My blog"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css" integrity="sha384-AfEj0r4/OFrOo5t7NnNe46zW/tFgW6x/bCJG8FqQCEo3+Aro6EYUG4+cU+KJWu/X" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"><link rel="stylesheet" href="http://localhost:1313/css/main.css" /><link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" />
+  <link rel="stylesheet" href="http://localhost:1313/css/highlight.min.css" /><link rel="stylesheet" href="http://localhost:1313/css/codeblock.css" /><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.css" integrity="sha384-h/L2W9KefUClHWaty3SLE5F/qvc4djlyR4qY3NUV5HGQBBW7stbcfff1+I/vmsHh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/default-skin/default-skin.min.css" integrity="sha384-iD0dNku6PYSIQLyfTOpB06F2KCZJAKLOThS5HRe8b3ibhdEQ6eKsFf/EeFxdOt5R" crossorigin="anonymous">
+
+  </head>
+  <body>
+    <nav class="navbar navbar-default navbar-fixed-top navbar-custom">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#main-navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="http://localhost:1313/">My blog</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="main-navbar">
+      <ul class="nav navbar-nav navbar-right">
+        
+          
+            <li>
+              <a title="Home" href="/">Home</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="Posts" href="/post/">Posts</a>
+            </li>
+          
+        
+          
+            <li>
+              <a title="About" href="/about/">About</a>
+            </li>
+          
+        
+
+        
+
+        
+      </ul>
+    </div>
+
+    
+      <div class="avatar-container">
+        <div class="avatar-img-border">
+          <a title="My blog" href="http://localhost:1313/">
+            <img class="avatar-img" src="http://localhost:1313/img/avatar-icon.png" alt="My blog" />
+          </a>
+        </div>
+      </div>
+    
+
+  </div>
+</nav>
+
+
+
+
+    
+
+
+<div class="pswp" tabindex="-1" role="dialog" aria-hidden="true">
+
+<div class="pswp__bg"></div>
+
+<div class="pswp__scroll-wrap">
+    
+    <div class="pswp__container">
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+      <div class="pswp__item"></div>
+    </div>
+    
+    <div class="pswp__ui pswp__ui--hidden">
+    <div class="pswp__top-bar">
+      
+      <div class="pswp__counter"></div>
+      <button class="pswp__button pswp__button--close" title="Close (Esc)"></button>
+      <button class="pswp__button pswp__button--share" title="Share"></button>
+      <button class="pswp__button pswp__button--fs" title="Toggle fullscreen"></button>
+      <button class="pswp__button pswp__button--zoom" title="Zoom in/out"></button>
+      
+      
+      <div class="pswp__preloader">
+        <div class="pswp__preloader__icn">
+          <div class="pswp__preloader__cut">
+            <div class="pswp__preloader__donut"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="pswp__share-modal pswp__share-modal--hidden pswp__single-tap">
+      <div class="pswp__share-tooltip"></div>
+    </div>
+    <button class="pswp__button pswp__button--arrow--left" title="Previous (arrow left)">
+    </button>
+    <button class="pswp__button pswp__button--arrow--right" title="Next (arrow right)">
+    </button>
+    <div class="pswp__caption">
+      <div class="pswp__caption__center"></div>
+    </div>
+    </div>
+    </div>
+</div>
+
+
+  
+  
+  
+
+
+
+
+
+
+  
+
+  <header class="header-section ">
+    
+    
+    <div class="intro-header no-img">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+            <div class="post-heading">
+              
+                <h1>Risk Detections in Microsoft Entra ID: An Overview</h1>
+              
+              
+              
+              
+                <span class="post-meta">
+  
+  
+  <i class="fas fa-calendar"></i>&nbsp;Posted on August 9, 2024
+  
+  
+    &nbsp;|&nbsp;<i class="fas fa-clock"></i>&nbsp;3&nbsp;minutes
+  
+  
+  
+    
+      &nbsp;|&nbsp;<i class="fas fa-user"></i>&nbsp;Viggo stomsvik
+    
+  
+  
+</span>
+
+
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  
+  </header>
+
+
+    
+<div class="container" role="main">
+  <div class="row">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+      <article role="main" class="blog-post">
+        <p>Microsoft Entra ID (formerly Azure AD Identity Protection) offers a comprehensive set of risk detection mechanisms designed to identify and mitigate potential security threats. These detections are crucial for organizations aiming to protect their identity infrastructure from various attack vectors. Below, we&rsquo;ll explore the key aspects of risk detections in Microsoft Entra ID, highlighting how they function and how they can be effectively managed.</p>
+<p><img alt="Defender for Identity" src="/images/identity-protection-overview.png" title="Defender for Identity"></p>
+<h3 id="types-of-risk-detections">Types of Risk Detections</h3>
+<ol>
+<li>
+<p>Atypical Travel: This detection identifies two sign-ins from geographically distant locations within a timeframe that would make it impossible for the user to physically travel between them. It&rsquo;s particularly useful for catching potential credential sharing or hijacking incidents.</p>
+</li>
+<li>
+<p>Impossible Travel: Similar to atypical travel, this detection flags sign-ins from distant locations that occur too quickly for normal travel, indicating potential unauthorized access.</p>
+</li>
+<li>
+<p>Malicious IP Address: Sign-ins from known malicious IP addresses are flagged. These IP addresses are identified through various threat intelligence sources, including high failure rates of sign-ins from those IPs.</p>
+</li>
+<li>
+<p>Password Spray: This detection identifies attempts to access multiple accounts using common passwords. A successful attempt triggers this detection, signaling a potential breach through credential stuffing.</p>
+</li>
+<li>
+<p>Unfamiliar Sign-in Properties: If a sign-in occurs from a device, location, or IP address that is inconsistent with the user&rsquo;s typical behavior, this detection is triggered. This helps catch scenarios where an attacker might have gained access to a user&rsquo;s credentials.</p>
+</li>
+<li>
+<p>Suspicious Inbox Manipulation Rules: Detected when unusual inbox rules are created, such as forwarding all emails to an external address, potentially indicating a compromised account being used for data exfiltration.</p>
+</li>
+<li>
+<p>Attacker in the Middle: This high-precision detection occurs when an attacker intercepts credentials or tokens via a malicious reverse proxy during authentication. It’s a sophisticated attack that could lead to complete account takeover if not mitigated swiftly.</p>
+</li>
+</ol>
+<h3 id="managing-and-responding-to-risk-detections">Managing and Responding to Risk Detections</h3>
+<p>To effectively manage these risks, Microsoft Entra ID provides several tools and practices:</p>
+<ul>
+<li>
+<p><strong>Risk-Based Conditional Access:</strong> Organizations can create Conditional Access policies based on user and sign-in risk levels. For example, users detected with high risk might be required to complete multifactor authentication (MFA) or change their password before gaining access. These policies can be configured to automatically respond to risk detections, reducing the window of opportunity for attackers.</p>
+</li>
+<li>
+<p><strong>Risk Remediation:</strong> Once a risk is detected, remediation steps such as forcing a password reset or blocking access until the risk is addressed can be automatically applied. This helps in reducing the mean time to remediate, ensuring that risks are handled promptly.</p>
+</li>
+<li>
+<p><strong>User and Sign-In Risk Reports:</strong> Detailed reports are available that allow administrators to investigate risky sign-ins and user behaviors. These reports can be filtered by various parameters, such as risk level and detection type, to provide insights into potential security issues and guide remediation efforts.</p>
+</li>
+<li>
+<p><strong>Notifications and Alerts:</strong> Administrators can configure alerts to be notified of risky users or sign-ins. These alerts can be tailored to trigger based on specific risk thresholds, ensuring that critical issues are brought to attention in a timely manner.</p>
+</li>
+</ul>
+<h3 id="best-practices">Best Practices</h3>
+<ul>
+<li>
+<p>Enable MFA for All Users: Ensuring that all users are registered for MFA significantly reduces the risk of unauthorized access, especially when used in conjunction with Conditional Access policies.</p>
+</li>
+<li>
+<p>Regular Monitoring and Investigation: Regularly review risk reports and investigate any anomalies. Use tools like Microsoft 365 Defender to correlate identity risks with other security events across your environment.</p>
+</li>
+<li>
+<p>Educate Users: Regularly inform users about the importance of secure sign-in practices and how to recognize suspicious activity. This can help in early detection and reporting of potential security issues.</p>
+</li>
+</ul>
+<p>In conclusion, Microsoft Entra ID provides a robust framework for detecting and responding to identity-related risks. By leveraging these tools and following best practices, organizations can enhance their security posture and protect against the growing number of cyber threats targeting user identities.</p>
+
+
+        
+
+        
+
+        
+          
+
+          
+        
+      </article>
+
+      
+        <ul class="pager blog-pager">
+          
+            <li class="previous">
+              <a href="http://localhost:1313/post/migrate-to-cloud-sync/" data-toggle="tooltip" data-placement="top" title="Migrate Azure AD Connect to Cloud Sync">&larr; Previous Post</a>
+            </li>
+          
+          
+        </ul>
+      
+
+
+      
+
+    </div>
+  </div>
+</div>
+
+      
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+        <ul class="list-inline text-center footer-links">
+          
+              <li>
+                <a href="mailto:vstoms@gmail.com" title="Email me">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fas fa-envelope fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/vstoms" title="GitHub">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-github fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/stoms" title="Twitter">
+                  <span class="fa-stack fa-lg">
+                    <i class="fas fa-circle fa-stack-2x"></i>
+                    <i class="fab fa-twitter fa-stack-1x fa-inverse"></i>
+                  </span>
+                </a>
+              </li>
+          
+          <li>
+            <a href="" title="RSS">
+              <span class="fa-stack fa-lg">
+                <i class="fas fa-circle fa-stack-2x"></i>
+                <i class="fas fa-rss fa-stack-1x fa-inverse"></i>
+              </span>
+            </a>
+          </li>
+          
+        </ul>
+        <p class="credits copyright text-muted">
+          
+            
+              <a href="https://blog.stomsvik.com">Viggo stomsvik</a>
+            
+          
+
+          &nbsp;&bull;&nbsp;&copy;
+          
+            2024
+          
+
+          
+            &nbsp;&bull;&nbsp;
+            <a href="http://localhost:1313/">My blog</a>
+          
+        </p>
+        
+        <p class="credits theme-by text-muted">
+          <a href="https://gohugo.io">Hugo v0.131.0</a> powered &nbsp;&bull;&nbsp; Theme <a href="https://github.com/halogenica/beautifulhugo">Beautiful Hugo</a> adapted from <a href="https://deanattali.com/beautiful-jekyll/">Beautiful Jekyll</a>
+          
+        </p>
+      </div>
+    </div>
+  </div>
+</footer><script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.js" integrity="sha384-g7c+Jr9ZivxKLnZTDUhnkOnsh30B4H0rpLUpJ4jAIKs4fnJI+sEnkvrMWph2EDg4" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/contrib/auto-render.min.js" integrity="sha384-mll67QQFJfxn0IYznZYonOWZ644AWYC+Pt2cHqMaRhXVrursRwvLnLaebdGIlYNa" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+<script src="http://localhost:1313/js/main.js"></script>
+<script src="http://localhost:1313/js/highlight.min.js"></script>
+<script> hljs.initHighlightingOnLoad(); </script>
+<script> $(document).ready(function() {$("pre.chroma").css("padding","0");}); </script><script> renderMathInElement(document.body); </script><script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe.min.js" integrity="sha384-QELNnmcmU8IR9ZAykt67vGr9/rZJdHbiWi64V88fCPaOohUlHCqUD/unNN0BXSqy" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/photoswipe/4.1.2/photoswipe-ui-default.min.js" integrity="sha384-m67o7SkQ1ALzKZIFh4CiTA8tmadaujiTa9Vu+nqPSwDOqHrDmxLezTdFln8077+q" crossorigin="anonymous"></script><script src="http://localhost:1313/js/load-photoswipe.js"></script>
+
+
+
+
+
+
+
+
+
+    
+  </body>
+</html>
+

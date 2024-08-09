@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Exchange on My blog</title>
+    <link>http://localhost:1313/tags/exchange/</link>
+    <description>Recent content in Exchange on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 May 2021 18:11:27 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/exchange/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Exchange Powershell Module</title>
+      <link>http://localhost:1313/post/update-exchange-powershell-module/</link>
+      <pubDate>Sun, 16 May 2021 18:11:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/update-exchange-powershell-module/</guid>
+      <description>If you try to update the Microsoft Exchange Powershell Module an get error that your administrator has blocked this application because it potentially pose a security risk to your computer.</description>
+    </item>
+    <item>
+      <title>Powershell Script Change Proxyaddresses</title>
+      <link>http://localhost:1313/post/powershell-script-change-proxyaddresses/</link>
+      <pubDate>Wed, 04 Sep 2019 15:40:13 +0200</pubDate>
+      <guid>http://localhost:1313/post/powershell-script-change-proxyaddresses/</guid>
+      <description>Quick tip to change proxyaddresses in Active Directory fast with csv input.</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Certificate on Exchange Servers</title>
+      <link>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</link>
+      <pubDate>Fri, 11 May 2018 06:48:58 +0000</pubDate>
+      <guid>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</guid>
+      <description>After Let’s Encrypt accept wildcard certificate we now can use this to build labs.</description>
+    </item>
+  </channel>
+</rss>

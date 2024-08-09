@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MCAS on My blog</title>
+    <link>http://localhost:1313/tags/mcas/</link>
+    <description>Recent content in MCAS on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 17 Mar 2019 08:41:05 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/mcas/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Block Download via Conditional Access and Mcas</title>
+      <link>http://localhost:1313/post/block-download-via-conditional-access-and-mcas/</link>
+      <pubDate>Sun, 17 Mar 2019 08:41:05 +0200</pubDate>
+      <guid>http://localhost:1313/post/block-download-via-conditional-access-and-mcas/</guid>
+      <description>Hi, today I want to talk about Conditional Access and Conditional Access App Control (MCAS for short) but why?</description>
+    </item>
+  </channel>
+</rss>

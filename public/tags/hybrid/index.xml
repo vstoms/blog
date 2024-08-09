@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Hybrid on My blog</title>
+    <link>http://localhost:1313/tags/hybrid/</link>
+    <description>Recent content in Hybrid on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2019 15:42:38 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/hybrid/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune Autopilot Hybrid Join Error Something Went Wrong 80070774</title>
+      <link>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</link>
+      <pubDate>Mon, 20 May 2019 15:42:38 +0200</pubDate>
+      <guid>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</guid>
+      <description>Quick blog around Intune Autopilot Hybrid Domain Join and error message 80070774.</description>
+    </item>
+    <item>
+      <title>How to Enable Self Service Password Reset</title>
+      <link>http://localhost:1313/post/how-to-enable-self-service-password-reset/</link>
+      <pubDate>Mon, 08 Apr 2019 08:27:11 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-enable-self-service-password-reset/</guid>
+      <description>Self-service password reset (SSPR) is a feature of Azure Active Directory that empowers users to easily reset their passwords and unlock their accounts without interacting with your helpdesk.</description>
+    </item>
+    <item>
+      <title>Lets Encrypt Certificate on Exchange Servers</title>
+      <link>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</link>
+      <pubDate>Fri, 11 May 2018 06:48:58 +0000</pubDate>
+      <guid>http://localhost:1313/post/lets-encrypt-certificate-exchange-servers/</guid>
+      <description>After Let’s Encrypt accept wildcard certificate we now can use this to build labs.</description>
+    </item>
+  </channel>
+</rss>

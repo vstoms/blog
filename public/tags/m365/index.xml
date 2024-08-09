@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>M365 on My blog</title>
+    <link>http://localhost:1313/tags/m365/</link>
+    <description>Recent content in M365 on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 16 May 2021 18:11:27 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/m365/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Update Exchange Powershell Module</title>
+      <link>http://localhost:1313/post/update-exchange-powershell-module/</link>
+      <pubDate>Sun, 16 May 2021 18:11:27 +0200</pubDate>
+      <guid>http://localhost:1313/post/update-exchange-powershell-module/</guid>
+      <description>If you try to update the Microsoft Exchange Powershell Module an get error that your administrator has blocked this application because it potentially pose a security risk to your computer.</description>
+    </item>
+    <item>
+      <title>How to Enable Self Service Password Reset</title>
+      <link>http://localhost:1313/post/how-to-enable-self-service-password-reset/</link>
+      <pubDate>Mon, 08 Apr 2019 08:27:11 +0200</pubDate>
+      <guid>http://localhost:1313/post/how-to-enable-self-service-password-reset/</guid>
+      <description>Self-service password reset (SSPR) is a feature of Azure Active Directory that empowers users to easily reset their passwords and unlock their accounts without interacting with your helpdesk.</description>
+    </item>
+    <item>
+      <title>Get List of Users From Csv With List of Dls</title>
+      <link>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</link>
+      <pubDate>Tue, 26 Jun 2018 11:03:18 +0200</pubDate>
+      <guid>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</guid>
+      <description>Header in the csv file should be DL&#xA;$PathToCsv = &amp;#34;groups.</description>
+    </item>
+    <item>
+      <title>Identify Users Who Have Registered for Mfa Using the Powershell</title>
+      <link>http://localhost:1313/post/identify-users-who-have-registered-for-mfa-using-the-powershell/</link>
+      <pubDate>Tue, 26 Jun 2018 08:43:48 +0200</pubDate>
+      <guid>http://localhost:1313/post/identify-users-who-have-registered-for-mfa-using-the-powershell/</guid>
+      <description>Identify users who have registered for MFA:&#xA;Get-MsolUser -All | where {$_.</description>
+    </item>
+  </channel>
+</rss>

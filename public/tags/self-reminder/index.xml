@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Self-Reminder on My blog</title>
+    <link>http://localhost:1313/tags/self-reminder/</link>
+    <description>Recent content in Self-Reminder on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 26 Jun 2018 11:03:18 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/self-reminder/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Get List of Users From Csv With List of Dls</title>
+      <link>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</link>
+      <pubDate>Tue, 26 Jun 2018 11:03:18 +0200</pubDate>
+      <guid>http://localhost:1313/post/get-list-of-users-from-csv-with-list-of-dls/</guid>
+      <description>Header in the csv file should be DL&#xA;$PathToCsv = &amp;#34;groups.</description>
+    </item>
+    <item>
+      <title>Enabling Debug Logging for the Netlogon Service</title>
+      <link>http://localhost:1313/post/enabling-debug-logging-for-the-netlogon-service/</link>
+      <pubDate>Tue, 12 Dec 2017 11:07:15 +0200</pubDate>
+      <guid>http://localhost:1313/post/enabling-debug-logging-for-the-netlogon-service/</guid>
+      <description>Here is a easy way to find out where the user is trying to logon to.</description>
+    </item>
+  </channel>
+</rss>

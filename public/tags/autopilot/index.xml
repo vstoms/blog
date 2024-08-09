@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Autopilot on My blog</title>
+    <link>http://localhost:1313/tags/autopilot/</link>
+    <description>Recent content in Autopilot on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 20 May 2019 15:42:38 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/autopilot/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Intune Autopilot Hybrid Join Error Something Went Wrong 80070774</title>
+      <link>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</link>
+      <pubDate>Mon, 20 May 2019 15:42:38 +0200</pubDate>
+      <guid>http://localhost:1313/post/intune-autopilot-hybrid-join-error-something-went-wrong-80070774/</guid>
+      <description>Quick blog around Intune Autopilot Hybrid Domain Join and error message 80070774.</description>
+    </item>
+    <item>
+      <title>Gather Windows Autopilot Device Data</title>
+      <link>http://localhost:1313/post/gather-windows-autopilot-device-data/</link>
+      <pubDate>Tue, 14 May 2019 08:45:13 +0200</pubDate>
+      <guid>http://localhost:1313/post/gather-windows-autopilot-device-data/</guid>
+      <description>Link to powershell script Export Computer AutoPilot Data .\Get-WindowsAutoPilotInfo.ps1 -ComputerName MYCOMPUTER -OutputFile .</description>
+    </item>
+  </channel>
+</rss>

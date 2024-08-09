@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>DevOps on My blog</title>
+    <link>http://localhost:1313/tags/devops/</link>
+    <description>Recent content in DevOps on My blog</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 14 May 2019 08:46:32 +0200</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/devops/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Build and Install Windows Terminal From Azure Devops</title>
+      <link>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</link>
+      <pubDate>Tue, 14 May 2019 08:46:32 +0200</pubDate>
+      <guid>http://localhost:1313/post/build-and-install-windows-terminal-from-azure-devops/</guid>
+      <description>Microsoft announced under //Build 2019, Windows Terminal is a new, modern, fast, efficient, powerful, and productive terminal application for users of command-line tools and shells like Command Prompt, PowerShell, and WSL.</description>
+    </item>
+  </channel>
+</rss>
